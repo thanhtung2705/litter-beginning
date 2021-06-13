@@ -1,0 +1,18 @@
+.footer {
+	padding: 25px;
+
+	p {
+		margin-bottom: 0;
+
+		a {
+			color: $text-color;
+			cursor: pointer;
+		}
+	}
+}
+
+.page-template-page-component .footer {
+	@media only screen and (max-width: 991px) {
+		padding: 25px 25px 80px;
+	}
+}

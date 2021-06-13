@@ -1,0 +1,359 @@
+.form {
+  position: fixed;
+  z-index: 9;
+
+  @media only screen and (min-width: 992px) {
+    right: -400px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    top: -100%;
+  }
+
+  &.book-form {
+    @media only screen and (min-width: 992px) {
+      top: 90px;
+    }
+
+    @media(max-height: 740px) and (min-width: 1025px) {
+      top: 60px;
+    } 
+  }
+
+  &.enquire-form {
+    @media only screen and (min-width: 992px) {
+      top: 285px;
+    }
+
+    @media(max-height: 740px) and (min-width: 1025px) {
+      top: 220px;
+    } 
+  }
+
+  &.enrol-form {
+    @media only screen and (min-width: 992px) {
+      top: 480px;
+    }
+
+    @media(max-height: 740px) and (min-width: 1025px) {
+      top: 380px;
+    } 
+  }
+
+  &.is-active {
+    right: 0;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+
+    @media only screen and (min-width: 992px) {
+      top: 100px;
+      width: inherit;
+    }
+
+    @media(max-height: 740px) and (min-width: 1025px) {
+      top: 40px;
+    }
+  }
+
+  &__form {
+    padding: 30px;
+    background: $white;
+    width: 400px;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+    position: relative;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      padding: 30px;
+      max-height: 100vh;
+      height: 100vh;
+
+      .ajax-loader {
+        display: none !important;
+      }
+    }
+
+    @media(max-height: 740px) and (min-width: 1025px) {
+      max-height: calc(100vh - 45px);
+    }
+
+    @media(max-height: 500px) and (min-width: 1025px) {
+      max-height: calc(100vh - 120px);
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    .form-item {
+      margin-bottom: 20px;
+
+      @media(max-height: 740px) and (min-width: 1025px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .form-actions {
+      margin-bottom: 0 ;
+    }
+
+    // .form-type-date {
+    //   overflow: hidden;
+    // }
+
+    select {
+      width: 100%;
+    }
+
+    h5 {
+      &:before {
+        background: transparent;
+      }
+    }
+
+    h4 {
+      margin-bottom: 29.5px;
+      position: relative;
+      padding-bottom: 14.5px;
+      text-align: left;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 64px;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+      }
+
+      &.text--blue {
+        &:before {
+          background: $blue;
+        }
+      }
+
+      &.text--light-blue {
+        &:before {
+          background: $light-blue;
+        }
+      }
+
+      &.text--red {
+        &:before {
+          background: $red;
+        }
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    left: -221px;
+    top: 0;
+    display: flex;
+    background-color: $white;
+    margin: 0;
+    font-weight: 400;
+    transform-origin: right bottom;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    justify-content: center;
+    transition: .5s;
+    z-index: 10;
+    border-color: $white;
+    box-shadow: 0 -6px 6px 0px rgba(0, 0, 0, 0.16);
+    min-width: 176px;
+    height: 44.5px;
+    border-radius:  20px 20px 0 0;
+
+    @media only screen and (min-width: 992px) {
+      transform: rotate(-90deg);
+      transform-origin: top right;
+    }
+
+    @media only screen and (max-width: 991px) {
+      transform: rotate(0);
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 54px;
+      border-radius: 0;
+      left: 0;
+      transform-origin: bottom;
+      display: none;
+    }
+
+    @media(max-height: 740px) and (min-width: 1025px) {
+      width: 150px;
+      left: -194px;
+      min-width: inherit;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+  }
+}
+
+.form-bars {
+  width: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  padding: 10px 3px;
+
+  br {
+    display: none;
+  }
+
+  &__row {
+    display: block;
+    background: $black;
+
+    &:nth-child(1) {
+      height: 2px;
+      width: 18px;
+      transform: translateY(0) rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      height: 2px;
+      width: 18px;
+      transform: translateY(-2px) rotate(45deg)
+    }
+  }
+}
+
+.wpcf7-quiz-label {
+  display: none;
+}
+
+div.wpcf7 .ajax-loader {
+  display: none;
+}
+
+.back-top {
+  transform: rotate(-90deg);
+  position: fixed;
+  display: none;
+  right: 0;
+  background: $white;
+  color: $blue;
+  border-color: $white;
+  width: 55px;
+  font-weight: 700;
+  font-size: 0;
+  border-radius: 25px 25px 0 0;
+  opacity: 0;
+  transition: .5s;
+
+  &.show {
+    opacity: 1;
+    transition: .5s;
+  }
+
+  @media only screen and (min-width: 992px) {
+    top: 680px;
+    display: flex;
+    right: -5px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    padding: 0 15px;
+    height: 44.5px;
+    cursor: pointer;
+  }
+
+  @media(max-height: 740px) and (min-width: 1025px) {
+    top: 545px;
+  } 
+
+  i {
+    font-size: 18px;
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.enquire-now-mobile {
+  width: 100%;
+  position: fixed;
+  border-radius: 0;
+  height: 60px;
+  bottom: -65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: .5s;
+
+  &.is-show {
+    bottom: 0;
+    transition: .5s;
+  }
+
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+
+  &:hover,
+  &:active {
+    background: $blue;
+    color: $white;
+    border-color: $blue;
+  }
+}
+
+.text-desktop {
+  display: none;
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 10px;
+}
+
+.form-type-date input {
+  content: "";
+  background: url("../images/np_monthly-calendar.svg") no-repeat scroll calc(100% - 15px) center #ebebeb;
+  cursor: pointer;
+}
+
+.is-hidden {
+  display: block !important;
+}
+
+
+.ui-datepicker th,
+.ui-datepicker td {
+  min-width: inherit;
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

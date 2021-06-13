@@ -1,0 +1,73 @@
+%btn,
+.btn {
+  @include rubik;
+  appearance: none;
+  background-image: none;
+  border-radius: 0;
+  border: rem(1px) solid $btn-color;
+  box-shadow: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.3333;
+  min-width: 200px;
+  outline: none;
+  padding: 12px 20px 11px;
+  text-align: center;
+  text-shadow: none;
+  transition: all .3s ease;
+  background-color: $btn-color;
+  color: $white;
+  cursor: pointer;
+  outline: 0;
+  border-radius: 25px;
+  position: relative;
+  z-index: 3;
+
+  &:hover {
+    background-color: $btn-color-hover;
+    border-color: $btn-color-hover;
+    color: $btn-color-hover;
+  }
+
+  &--red {
+    background: $red !important;
+    border-color: $red !important;
+
+    &:hover {
+      background: $white !important;
+      color: $red !important;
+      border-color: $red !important;
+    }
+  }
+
+  &--blue {
+    background: $blue;
+    border-color: $blue;
+
+    &:hover {
+      background: $white !important;
+      color: $blue !important;
+      border-color: $blue !important;
+    }
+  }
+
+  &--light-blue {
+    background: $light-blue !important;
+    border-color: $light-blue !important;
+
+    &:hover {
+      background: $white !important;
+      color: $light-blue !important;
+      border-color: $light-blue !important;
+    }
+  }
+
+  &--large {
+    min-width: 230px !important;
+  }
+
+  &--full {
+    width: 100%;
+  }
+}

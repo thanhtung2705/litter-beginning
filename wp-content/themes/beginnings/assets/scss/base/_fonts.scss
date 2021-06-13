@@ -1,0 +1,10 @@
+// FONTS
+// Google Font Import
+// @import url("//fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+// Icon Font
+@include font-face(base, 'fonts/base');
+
+// Font Text
+@include font-face(Rubik, fonts/Rubik-Bold, 700, normal);
+@include font-face(Rubik, fonts/Rubik-Regular, 400, normal);
